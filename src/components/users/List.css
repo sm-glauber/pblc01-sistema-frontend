@@ -1,9 +1,115 @@
-.list-container {
-  padding: 10px 20px;
-  width: max-content;
-  height: max-content;
+/* UserList.css */
 
+/* Geral para o container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Títulos principais */
+h1 {
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Inputs e botões */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Formulário de criação de usuário */
+.create-user-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.create-user-container input {
+  margin-bottom: 15px;
+}
+
+/* Lista de usuários */
+.user-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
   margin-top: 20px;
-  border: 3px solid black;
-  border-radius: 5px;
+}
+
+/* Cartão de Usuário */
+.user-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.user-card h3 {
+  margin-top: 0;
+}
+
+.user-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Botões de ação em cada cartão */
+.card-domain-del, .card-domain-put {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-domain-del {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.card-domain-put {
+  background-color: #f39c12;
+  color: white;
+}
+
+.card-domain-del:hover {
+  background-color: #c0392b;
+}
+
+.card-domain-put:hover {
+  background-color: #e67e22;
 }
