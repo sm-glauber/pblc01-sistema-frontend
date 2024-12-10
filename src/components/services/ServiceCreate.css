@@ -1,0 +1,29 @@
+.service-create-container {
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .service-create-container input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 80%;
+  }
+  
+  .service-create-container button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .service-create-container button:hover {
+    background-color: #45a049;
+  }
+  

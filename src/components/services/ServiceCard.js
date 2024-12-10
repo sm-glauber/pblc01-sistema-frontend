@@ -1,20 +1,22 @@
-import React from 'react';
-import Axios from 'axios';
+import React from "react";
+import Axios from "axios";
+import "./ServiceCard.css";
 
-function ServiceCard({ service, services, setServices }) {
-  const clickRemove = () => {
-    Axios.delete(`http://localhost:8080/servicos/${service.id}`)
-      .then(() => {
-        setServices(services.filter((s) => s.id !== service.id));
-      })
-      .catch((error) => console.error(error.response?.data || error.message));
+function ServiceCard(props) {
+  const clickDelete = async () => {
+    try {
+      await Axios.delete(`http://localhost:8080/servicos/${props.id}`);
+      props.setServiceList(props.serviceList.filter((service) => service.id !== props.id));
+    } catch (error) {
+      console.log(error.response?.data || error.message);
+    }
   };
 
   return (
-    <div className="service-card">
-      <h3>{service.titulo}</h3>
-      <p>{service.descricao}</p>
-      <button onClick={clickRemove}>Excluir</button>
+    <div className="service-card-container">
+      <h3>{props.titulo}</h3>
+      <p>Descrição: {props.descricao}</p>
+      <button onClick={clickDelete}>DELETE</button>
     </div>
   );
 }

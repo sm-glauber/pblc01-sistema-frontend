@@ -1,0 +1,12 @@
+.service-list-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
